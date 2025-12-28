@@ -39,7 +39,7 @@ jobs:
           flake8 server --count --exit-zero --max-line-length=120 --statistics
           echo "Python lint completed"
 
-    lint_js:
+  lint_js:
     name: Lint JavaScript Files
     runs-on: ubuntu-latest
 
@@ -60,4 +60,3 @@ jobs:
           # Show issues but do not fail the job
           find ./server/database -name "*.js" -exec jshint {} + || true
           echo "JavaScript lint completed"
-
